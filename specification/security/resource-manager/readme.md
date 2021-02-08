@@ -70,7 +70,7 @@ These are the global settings for the Security API.
 title: SecurityCenter
 description: API spec for Microsoft.Security (Azure Security Center) resource provider
 openapi-type: arm
-tag: package-composite-v3
+tag: package-2021-01
 ```
 
 ## Composite packages
@@ -78,6 +78,27 @@ tag: package-composite-v3
 The following packages may be composed from multiple api-versions.
 
 
+### Tag: package-2021-01
+
+These settings apply only when `--tag=package-2021-01` is specified on the command line.
+
+```yaml $(tag) == 'package-2021-01'
+input-file:
+  - Microsoft.Security/stable/2021-01-01/SecuritySolutions.json
+  - Microsoft.Security/stable/2021-01-01/adaptiveNetworkHardenings.json
+  - Microsoft.Security/stable/2021-01-01/alerts.json
+  - Microsoft.Security/stable/2021-01-01/allowedConnections.json
+  - Microsoft.Security/stable/2021-01-01/applicationWhitelistings.json
+  - Microsoft.Security/stable/2021-01-01/assessmentMetadata.json
+  - Microsoft.Security/stable/2021-01-01/assessments.json
+  - Microsoft.Security/stable/2021-01-01/discoveredSecuritySolutions.json
+  - Microsoft.Security/stable/2021-01-01/externalSecuritySolutions.json
+  - Microsoft.Security/stable/2021-01-01/jitNetworkAccessPolicies.json
+  - Microsoft.Security/stable/2021-01-01/secureScore.json
+  - Microsoft.Security/stable/2021-01-01/securitySolutionsReferenceData.json
+  - Microsoft.Security/stable/2021-01-01/serverVulnerabilityAssessments.json
+  - Microsoft.Security/stable/2021-01-01/topologies.json
+```
 ### Tag: package-composite-v1
 
 These settings apply only when `--tag=package-composite-v1` is specified on the command line.
@@ -480,4 +501,3 @@ See configuration in [readme.ruby.md](./readme.ruby.md)
 ## AzureResourceSchema
 
 See configuration in [readme.azureresourceschema.md](./readme.azureresourceschema.md)
-
